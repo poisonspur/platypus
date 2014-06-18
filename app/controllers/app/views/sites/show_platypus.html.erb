@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<%= @site.about.html_safe %>
+
+<% if user_signed_in? %>
+<%= link_to 'Edit', edit_site_path(@site) %> |
+<%= link_to 'Back', sites_path %>
+<% end %>

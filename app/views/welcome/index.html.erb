@@ -1,0 +1,31 @@
+<!--
+      <h3>Welcome to <span style="color:#000;"><%= @site.disp_name %></span></h3>
+-->
+
+      <br />
+      <%= @site.welcome %>
+      <br />
+      <br />
+      <br />
+      <%= image_tag "platsketch300.jpg" %>
+      <br />
+      <br />
+      <br />
+
+      <hr />
+
+      <table>
+      <tr>
+      <td width="50%">
+      <table>
+      <tr><td><b>Latest Site News</b></td></tr>
+      <tr><td><a href="/site_news/<%= @latest_news['id'] %>"><%= @latest_news['created_at'] %></a> - <%= @latest_news['body'] %></td></tr>
+      </table>
+      </td>
+      <td width="50%">
+      <table>
+      <tr><td><b>Latest Poison Spur Entry</b></td></tr>
+      <tr><td><a href="<%= @latest_entry['url'] %>"><%= @latest_entry['title'] %></a> - <%= @latest_entry['body'] %></td></tr>
+      </table>
+      </td>
+      </table>

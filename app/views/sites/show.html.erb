@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Base name:</strong>
+  <%= @site.base_name %>
+</p>
+
+<p>
+  <strong>Disp name:</strong>
+  <%= @site.disp_name %>
+</p>
+
+<p>
+  <strong>Is home ssl:</strong>
+  <%= @site.is_home_ssl %>
+</p>
+
+<p>
+  <strong>Admin email:</strong>
+  <%= @site.admin_email %>
+</p>
+
+<p>
+  <strong>Welcome:</strong>
+  <%= @site.welcome %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @site.about %>
+</p>
+
+<% if signed_in? %>
+<%= link_to 'Edit', edit_site_path(@site) %> |
+<%= link_to 'Back', sites_path %>
+<% end %>

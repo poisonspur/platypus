@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+<tr><td width="220px"><%= image_tag "dcj.jpg" %></td>
+<td valign="top">
+
+<p>
+  <strong>The dude:</strong>
+  <%= @person.first_name %> <%= @person.last_name %>
+</p>
+
+<p>
+  <strong>The deets:</strong>
+  <%= @person.summary.html_safe %>
+</p>
+</td></tr>
+</table>
+
+<% if user_signed_in? %>
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
+<% end %>
