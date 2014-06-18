@@ -9,7 +9,7 @@ class WelcomeController < ApplicationController
       end
       require 'json'
       require 'open-uri'
-      source = 'http://localhost:8080/?num=1&fields=title,url,body'
+      source = 'http://localhost:8080/?feed_name=PoisonSpurBlog&num=1&fields=title,url,body'
       begin
           res = open(source)
           le = JSON.load(res)

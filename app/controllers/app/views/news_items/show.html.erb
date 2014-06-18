@@ -1,9 +1,0 @@
-<p id="notice"><%= notice %></p>
-
-<h4><%= @news_item['created_at'] %></h4>
-<p><%= @news_item['body'] %></p>
-
-<% if signed_in? %>
-<%= link_to 'Edit', edit_news_item_path(@news_item) %> |
-<%= link_to 'Back', news_items_path %>
-<% end %>
