@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
       end
       @recent_sitenews = NewsItem.order('created_at DESC').all.limit(10)
       @recent_sitenews.each do |item|
-          item['body'] = item['body'].truncate(27)
+          item['body'] = item['body'].truncate(23)
       end
   end
 
