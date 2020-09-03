@@ -12,7 +12,7 @@ class SitesController < ApplicationController
   def show
   end
 
-  def show_platypus
+  def show_dcjweb
     @site = Site.find(1)
   end
 

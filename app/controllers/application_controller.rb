@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   def set_sitewide_vars
       require 'json'
       require 'open-uri'
-      source = 'http://localhost:8080/?feed_name=PoisonSpurBlog&num=10&fields=title,url'
+      source = 'http://localhost:8081/feeds?feed_name=PoisonSpurBlog&num=10&fields=title,url'
       begin
           res = open(source)
           @recent_poisonspur = JSON.load(res)

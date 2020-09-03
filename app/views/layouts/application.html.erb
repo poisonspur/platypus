@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>platypus dot org</title>
+  <title>dcjweb dot com</title>
+  <meta name="google-site-verification" content="NreJgoYXmtalWAKdlnCRIp31DcV_Qai6EGTT3uyNv1c" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,16 +11,16 @@
 <div id="wrap">
   <div id="masthead">
   <!--
-    <a href="/"><h1>platypus dot org</h1></a>
+    <a href="/"><h1>dcjweb dot com</h1></a>
   -->
-  <h1>platypus dot org</h1>
+  <h1>dcjweb dot com</h1>
   </div>
   <div id="menucontainer">
     <div id="menu">
       <ul>
         <li><a href="/" class="<%= 'current' if params[:controller] == 'welcome' %>" >Home</a></li>
         <li><a href="/about_dave" class="<%= 'current' if params[:controller] == 'people' %>" >About Dave</a></li>
-        <li><a href="/about_platypus" class="<%= 'current' if params[:controller] == 'sites' %>" >About platypus.org</a></li>
+        <li><a href="/about_dcjweb" class="<%= 'current' if params[:controller] == 'sites' %>" >About dcjweb.com</a></li>
         <li><a href="/site_news" class="<%= 'current' if params[:controller] == 'news_items' %>" >Site News</a></li>
         <li><a href="/projects" class="<%= 'current' if params[:controller] == 'projects' %>" >Projects</a></li>
         <li><a href="http://poisonspur.com" class="<%= 'current' if params[:controller] == 'poisonspur' %>" >Poison Spur</a></li>
@@ -28,7 +29,7 @@
   </div>
   <div id="container">
     <div id="sidebar">
-      <%= image_tag "platlogo.jpg" %>
+      <!-- <%= image_tag "platlogo.jpg" %> -->
       <h3>Site News</h3>
       <% @recent_sitenews.each do |item| %>
             <li><a href="/site_news/<%=item['id'] %>"><%= item['body'] %></a></li>
